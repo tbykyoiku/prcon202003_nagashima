@@ -1,0 +1,72 @@
+<!-- ツリーベル四日市事業所 -->
+<!-- 第3回PGコンテスト用ベースすごろくプログラム -->
+<!-- メイン処理 -->
+
+<!-- 更新履歴 -->
+<!-- 2020 1/16 和田 新規作成 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/sugoroku.css">
+		<script src="lib/jquery-3.4.1.min.js" type="text/javascript"></script>
+		<script src="js/sugoroku.js" type="text/javascript"></script>
+		<script src="js/sugoroku_events.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1>すごろくゲーム</h1>
+
+		<!--ゲーム設定エリア -->
+		<div id="gameSettingArea">
+<p>プレイする人数を選択してください(最大6人まで)</p>
+<form name="formPlayer">
+                        <p>
+                        <select name="playerSelect">
+                        <!--<select id="playerSelect"> -->
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                        <option value="3">3人</option>
+                        <option value="4">4人</option>
+                        <option value="5">5人</option>
+                        <option value="6">6人</option>
+                        </select>
+                        </p>
+                        </form>
+			<button id="startGameBtn" onClick="startGame()">ゲーム開始</button>
+		</div>
+
+		<!-- 	ゲームエリア -->
+		<div id="gameArea">
+			<div id="boardArea">
+				<div id="board"></div>
+			</div>
+<!--長島追加(S) -->
+
+                        <div id="controlAreaButton">
+                                <button id="diceStart" disabled="disabled" onClick="diceStart()">START</button><!--長島追加 -->
+				<button id="diceStop" disabled="disabled" onClick="diceStop()">STOP</button>
+				<!--<div id="playerArea"></div> -->
+			</div>
+                        <div id="controlAreaLael">
+				<div id="dice"></div>
+                                <div id="turnPlayer"></div>
+				<!--<div id="playerArea"></div> -->
+			</div>
+ <!--	
+			<div id="controlArea">
+				<div id="dice"></div>
+                                <button id="diceStart" disabled="disabled" onClick="diceStart()">START</button>
+				<button id="diceroll" disabled="disabled" onClick="diceStop()">STOP</button>
+				<div id="playerArea"></div>
+			</div>
+-->
+<!--長島追加(E) -->
+
+			<div id="logArea">
+				<textarea  id="logMsg"></textarea>
+			</div>
+
+		</div>
+	</body>
+</html>
